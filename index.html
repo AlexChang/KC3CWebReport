@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html class="js cssanimations">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="科创3C-第20小组展示">
+  <title>科创3C-第20小组展示</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="images/favicon.png">
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="科创3C-第20小组展示">
+  <link rel="apple-touch-icon-precomposed" href="images/favicon.png">
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="images/favicon.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+  <link rel="stylesheet" href="styles/amazeui.min.css">
+  <link rel="stylesheet" href="styles/amazeui.flat.min.css">
+  <link rel="stylesheet" href="styles/default.css">
+  <style>
+  .am-topbar .am-text-ir {
+    display: block;
+    margin-right: 10px;
+    height: 50px;
+    width: 125px;
+    background: url(images/webicon.png) no-repeat left center;
+    -webkit-background-size: 125px 50px;
+    background-size: 125px 50px;
+  }
+  .headwrapper{
+    position: relative;
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    background-color: #1387ff;
+  }
+  .headInnerWrapper{
+    position: relative;
+    height: 400px;
+    width: 64%;
+    overflow: hidden;
+    left: 18%;
+  }
+  .headInnerWrapperLeft{
+    position: relative;
+    height: 400px;
+    width: 50%;
+    overflow: hidden;
+    float: left;
+    text-align: center;
+    padding-top: 125px;
+  }
+  .headInnerWrapperRight{
+    position: relative;
+    height: 400px;
+    width: 50%;
+    overflow: hidden;
+  }
+  .videowrapper{
+    text-align: center;
+  }
+  .h1modification{
+    color: #7f7f7f;
+  }
+  .codewrapper{
+    background-color: #f8f8f8;
+  }
+  .imgwrapper{
+    text-align: center;
+  }
+  .textwrapper{
+    text-align: center;
+  }
+  h1{
+    text-align: center;
+  }
+  h2{
+    color: #333;
+    font-weight: 500;
+    font-size: 1.4em;
+  }
+  p{
+    text-indent: 2em;
+  }
+  </style>
+  <script src="scripts/jquery-3.1.1.min.js"></script>
+  <script src="scripts/amazeui.min.js"></script>
+  <script src="scripts/highlight.pack.js"></script>
+</head>
+<body class="am-with-topbar-fixed-top">
+<div id="wrapper" style="position: relative; height: auto;">
+  <header class="am-topbar am-topbar-fixed-top">
+  <h1 class="am-topbar-brand" style="margin-left: 18%">
+    <a href="#" class="am-text-ir">KCⅢ-C Group20</a>
+  </h1>
+  <div class="am-collapse am-topbar-collapse am-topbar-right" id="doc-topbar-collapse" style="margin-right: 18%">
+    <ul class="am-nav am-nav-pills am-topbar-nav">
+      <li id="overviewli" class="am-active"><a href="#overview">项目概述</a></li>
+      <li id="introductionli" class=""><a href="#introduction">成员介绍</a></li>
+      <li id="hardwareli" class=""><a href="#hardware">硬件实现</a></li>
+      <li id="softwareli" class=""><a href="#software">软件实现</a></li>
+      <li id="analysisli" class=""><a href="#analysis">测试分析</a></li>
+      <li id="galleryli" class=""><a href="#gallery">视频图集</a></li>
+      <li id="linksli" class=""><a href="#links">下载链接</a></li>
+    </ul>
+  </div>
+  </header>
+  <div class="headwrapper">
+    <div class="headInnerWrapper">
+      <div class="headInnerWrapperLeft">
+        <p style="font-size:xx-large; color:white; text-indent: 0;">Android平台智能车操控系统</p>
+        <p style="font-size:xx-large; color:white; text-indent: 0;">工科创Ⅲ-C 第二十组</p>
+      </div>
+      <div class="headInnerWrapperRight">
+        <img id="brain" src="images/brain.png" style="position: absolute; height: 400px; z-index: 1; opacity: 1;">
+        <img id="car" src="images/car.png" style="position: absolute; height: 400px; z-index: 2; padding-left: 0%;">
+      </div>
+    </div>
+  </div>
+  <div class="am-g am-g-collapse" style="min-height: 420px;">
+    <div>
+      <div class="am-u-sm-2"></div>
+      <div class="am-u-sm-8 am-u-sm-offset-2">
+        <h1 id="overview" name="overview" class="h1modification">————项目概述————</h1>
+        <h2>项目介绍</h2>
+        <p>本课题是基于android手机平台，借助于蓝牙通讯技术，从而设计和实现以手机APP控制、蓝牙通讯连接、单片机电路操控等模块组成的无线遥控小车的解决方案。</p>
+        <h2>完成情况</h2>
+        <p>我们顺利完成了双机通讯，实现了通过手机远程操纵小车移动。
+          除了基础的“按键控制”外，我们还实现多重控制方法，包括“重力控制”、“语音识别控制”、“手势控制”、“路径规划”等，使得小车能顺利完成前进、后退、左转、右转等相应动作。
+          同时，我们也实现了实时视频传输的功能，可以通过小车负载手机的摄像头捕捉图像，即时传输到控制手机端。</p>
+        <p>我们也有不足的地方，由于左右电机的区别，我们在直线行驶时会稍有偏差；同时实时视频传输对局域网络信号要求较高，在信号较弱的地方会导致视频确实流畅度；最后我们的控制端UI界面也有待改进。</p>
+        <h2>整体结构</h2>
+        <p>通过两部手机及一辆小车完成整个项目。两部手机通过wifi相互连接，一部手机作为控制端用于执行各个控制操作，另一部手机作为接收端，通过蓝牙与小车连接。</p>
+        <p>使用者可通过控制端手机对小车进行遥控。控制信号将首先通过wifi传输到接收端手机，接收端将控制信号转换为对应的字符指令，通过蓝牙发送到小车的MSP430模块。
+          最后MSP430模块根据接收到的字符调节电机的电平和PWM占空比，进而控制车轮的方向与速度，实现前进、转弯等操作。</p>
+        <p>当激活视频回传功能时，接收端手机打开摄像头，拍摄并将拍摄画面通过wifi实时回传到控制端手机。</p>
+        <h2>自我评价</h2>
+        <p>总体来说，我们达到了预期目标，并且在测试时顺利实现各个功能。</p>
+      </div>
+      <div class="am-u-sm-2"></div>
+    </div>
+
+    <div>
+      <div class="am-u-sm-2"></div>
+      <div class="am-u-sm-8 am-u-sm-offset-2">
+        <h1 id="introduction" name="introduction" class="h1modification">————成员介绍————</h1>
+        <div class="am-g am-g-collapse">
+          <div class="am-u-sm-3 imgwrapper">
+            <img class="am-circle" style="width: 256px" src="images/test_kimi/figure1.png"/>
+          </div>
+          <div class="am-u-sm-3 imgwrapper">
+            <img class="am-circle" style="width: 256px" src="images/test_kimi/figure1.png"/>
+          </div>
+          <div class="am-u-sm-3 imgwrapper">
+            <img class="am-circle" style="width: 256px" src="images/test_kimi/figure2.png"/>
+          </div>
+          <div class="am-u-sm-3 imgwrapper">
+            <img class="am-circle" style="width: 256px" src="images/test_kimi/figure1.png"/>
+          </div>
+      </div>
+      <div class="am-g am-g-collapse" style="margin-top:15px;">
+          <div class="am-u-sm-3 textwrapper">张福明<br>组长，负责语音识别、网页制作</div>
+          <div class="am-u-sm-3 textwrapper">徐正天<br>负责视频回传、基本按键控制</div>
+          <div class="am-u-sm-3 textwrapper">耿晓晴<br>负责任意路径、重力感应</div>
+          <div class="am-u-sm-3 textwrapper">瞿文浩<br>负责硬件部分、蓝牙通讯</div>
+      </div>
+        <ul class="am-comments-list am-comments-list-flip">
+          <li class="am-comment am-comment-primary">
+            <img src="images/test_kimi/figure1.png" alt="" class="am-comment-avatar" width="48" height="48">
+            <div class="am-comment-main">
+              <header class="am-comment-hd">
+                <div class="am-comment-meta">
+                  <a href="#link-to-user" class="am-comment-author">瞿文浩</a>
+                  发表于 2016-1-14 22:00
+                </div>
+              </header>
+              <div class="am-comment-bd">
+                在本课题中，我主要负责的是硬件部分，包括单片机代码，小车的搭建与改造。受家庭环境的影响，我从小就对硬件电路颇感兴趣，再加上有着较强的动手能力，我便自告奋勇负责整个硬件部分。<br>
+                由于这学期第一次引入了非组装的集成小车，往年的资料没有了参考价值，我花了很多时间去理解老师给出的电路图，也正因如此让我对小车的整体架构有了更深入的了解和认识。
+                在初期我烧录代码一直失败，经过多次排查我先后发现我们的数据线，小车上的组件存在问题，多次与老师进行交流和更换部件后最终成功完成烧录。
+                这一失败的经历也迫使我去学习更多launchpad的知识，令我收获良多，同时也要感谢老师的耐心教导。<br>
+                最后也要感谢我们团队的每一位成员，这个课题是通过大家的努力共同完成的，每个人都是不可或缺的。
+              </div>
+            </div>
+          </li>
+          <li class="am-comment am-comment-flip am-comment-danger">
+            <img src="images/test_kimi/figure2.png" alt="" class="am-comment-avatar" width="48" height="48">
+            <div class="am-comment-main">
+              <header class="am-comment-hd">
+                <div class="am-comment-meta">
+                  <a href="#link-to-user" class="am-comment-author">耿晓晴</a>
+                  发表于 2017-1-15 15:30
+                </div>
+              </header>
+              <div class="am-comment-bd">
+                本次的科创难度比之前有很大的提升，也让我受益菲强。在本次科创之前，我们都没有接触过java，对双击通讯方面也了解甚少，
+                所以花了很多时间了解相关内容，对我们的自学能力是一个极大的挑战。<br>
+                在本次科创中，我主要负责任意路径和重力感应部分，其中出现了很多问题，但在我的大婶队友们的帮助下都可以一一解决。
+                在这个过程中我学习到了很多新的知识与技能，也从中收获了很大的成就感。<br>
+                最后感谢我的队友们在科创过程中给予我的帮助，也感谢科创这门课程让我的能力得到提升。
+              </div>
+            </div>
+          </li>
+          <li class="am-comment am-comment-success">
+            <img src="images/test_kimi/figure1.png" alt="" class="am-comment-avatar" width="48" height="48">
+            <div class="am-comment-main">
+              <header class="am-comment-hd">
+                <div class="am-comment-meta">
+                  <a href="#link-to-user" class="am-comment-author">徐正天</a>
+                  发表于 2017-1-15 12:30
+                </div>
+              </header>
+              <div class="am-comment-bd">
+                本次的科创3C课程与之前修的课，不论是在难度还是在课程的深度上都上升了一个档次。而且这门课的特点就是没有老师在旁讲解，
+                老师只起到答疑作用，一切都要靠自己摸索，自己查找资料以及相关文献，这无疑锻炼了我们的自主动手能力。<br>
+                科创3C是门费时费力的课程，我在这之前没有接触过java，这对我是一种全新的尝试与体验。在编写代码之前，
+                我花了大量时间了解了Java语言的基本语法以及语言规则。在整个科创的过程中，我实现的部分是视频回传以及基本按键控制小车，
+                虽然中间出现了很多问题，但基本上都通过谷歌一一解决。这一个学期下来我也从一窍不通逐步到对安卓编程的熟悉与入门。<br>
+                最后我也要感谢我的队友，使他们在其他工作上的认真投入让我在专注于自己任务的调试，也要感谢张老师在科创3C的过程中对我们的帮助！
+              </div>
+            </div>
+          </li>
+          <li class="am-comment am-comment-flip am-comment-warning">
+            <img src="images/test_kimi/figure1.png" alt="" class="am-comment-avatar" width="48" height="48">
+            <div class="am-comment-main">
+              <header class="am-comment-hd">
+                <div class="am-comment-meta">
+                  <a href="#link-to-user" class="am-comment-author">张福明</a>
+                  发表于 2017-1-14 20:30
+                </div>
+              </header>
+              <div class="am-comment-bd">
+                能在这次工科创项目中担任组长，我感到很荣幸。能和认真负责又充满创意的组员们一起合作，对我而言是一件十分开心的事情。在项目里，我主要负责了语音识别部分与网页制作，
+                虽然之前没有Android开发经验，但是通过这次项目，我对Android开发有了一定的了解，并且增强了我学习新事物的能力。当然，在整个项目的开发过程中，我们也遇到了很多困难，
+                但在团队成员间的相互鼓励与帮助下，我们一起克服了这些难题。非常感谢组里的每一位成员为此次工科创项目的付出，能取得这样的成果，是我们共同的收获。
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="am-u-sm-2"></div>
+    </div>
+
+    <div>
+      <div class="am-u-sm-2"></div>
+      <div class="am-u-sm-8 am-u-sm-offset-2">
+        <h1 id="hardware" name="hardware" class="h1modification">————硬件实现————</h1>
+        <h2>整体结构与电路图</h2>
+        <img style="" src="images/car_image.png">
+        <img style="width: 100%" src="images/car_ele.jpg">
+        <p>在本课题中我们使用的是学校提供的非组装圆盘造型小车，该小车高度集成了课题中需要的如MSP430G2553芯片、DRV8833PWPR电机驱动、蓝牙接口段等所需硬件，同时它也提供了许多额外的接口来实现更多的功能。</p>
+        <h2>蓝牙模块</h2>
+        <img style="" src="images/blue.png">
+        <p>蓝牙模块共有4个引脚：<br>
+        </p><div style="text-indent: 3em">VCC ：电源端，需接在3.3V的电压端。</div>
+        <div style="text-indent: 3em">GND：接地端，需接地。</div>
+        <div style="text-indent: 3em">TXD ：发送端，一般表示为自己的发送端，正常通信必须接另一个设备的RXD。</div>
+        <div style="text-indent: 3em">RXD ：接收端，一般表示为自己的接收端，正常通信必须接另一个设备的TXD。</div><p></p>
+        <p>在本课题中由于使用了非组装圆盘造型小车，可直接将蓝牙模块接在小车背面的接口上，在电路图中为J4接口。</p>
+        <h2>LAUNCHPAD</h2>
+        <img style="" src="images/launchpad.jpg">
+        <p>通过Launchpad可将所写代码烧入MSP430模块中，实现编程控制。使用非组装圆盘造型小车时，使用的是小车上集成的MSP430模块，需将launchpad图中右上角部分的
+          VCC、TEST、RESET三个接口分别接入在小车上MSP430芯片对应接口处，同时打开小车电源，方可进行烧录。</p>
+        <h2>DRV8833PWPR模块</h2>
+        <img style="" src="images/drv.jpg">
+        <p>电机驱动模块集成在小车中，用于控制小车的两个电机。其中VM端为使能端，需保持接入高电平。AIN1、AIN2用于控制A电机的转动，
+        当AIN1接入PWM信号，AIN2处于低电平时，电机正转，反之电机反转。可通过调节接入PWM的占空比来调整电机转动速度。电机B的控制方式同理。</p>
+        <h2>功能实现</h2>
+        <p>在本课题中，我们通过Energia对单片机进行编程和烧录。
+        主要实现单片机不断地通过蓝牙模块接收字符，根据接收到的字符判断需要执行的指令并调节引脚信号。
+        在Energia中，可通过digitalWrite函数控制引脚的高低电平信号，可通过analogWrite函数控制引脚的PWM信号占空比。
+        在电路图中已经给出了电机驱动的各个控制信号所对应的MSP430中的引脚，只需要按需求调节4个引脚的信号即可完成小车的所有动作。</p>
+        <p>具体代码可通过下载链接下载查阅。</p>
+      </div>
+      <div class="am-u-sm-2 am-u-end"></div>
+    </div>
+
+    <div>
+      <div class="am-u-sm-2"></div>
+      <div class="am-u-sm-8 am-u-sm-offset-2">
+        <h1 id="software" name="software" class="h1modification">————软件实现————</h1>
+        <h2>界面展示</h2>
+        <div class="am-g am-g-collapse">
+          <div class="am-u-sm-3">
+            <img style="width: 100%" src="images/menu.png">
+          </div>
+          <div class="am-u-sm-3" style="padding-left: 10px; padding-right: 10px; padding-top: 10px;">
+            <h2>主界面</h2>
+            <p style="text-indent: 0;">该界面为控制/受控端主界面<br><br>通过点击屏幕中的图标按钮选择进入不同的控制模式<br><br>从左向右，从上到下，各模式分别为“按钮控制(视频回传)”、
+              “重力控制”、“语音控制”、“手势控制”、“路径绘制”、“向量控制”、“物体跟踪”与“连接”</p>
+          </div>
+          <div class="am-u-sm-3">
+            <img style="width: 100%" src="images/connect.png">
+          </div>
+          <div class="am-u-sm-3" style="padding-left: 10px; padding-top: 10px;">
+            <h2>连接</h2>
+            <p style="text-indent: 0;">该界面为控制/受控端连接界面<br><br>连接至同一WIFI下的控制端与受控端在App启动后会自动连接，成功连接后会显示出相关LOG INFO<br><br>受控端程序启动后会
+              自动开启蓝牙并搜索小车，成功连接后会显示"Program has connected to car."</p>
+          </div>
+        </div>
+        <h2>视频回传</h2>
+        <p>视频回传分为两个部分，分别是视频在小车受控端的采集传输与在用户控制端的接收展示。在小车受控端，我们打开系统相机并通过
+          previewCallback一帧一帧获取预览的图片，压缩并转化为byteArray后借助Socket通过UDP广播至连接到同一WIFI下的用户控制端，
+          控制端在接受到图片后，逐帧将图片显示在屏幕上实现视频回传。受到网络环境与压缩传输等方面的影响，视频回传功能存在一定程度上
+          的时间延迟。
+        </p>
+        <pre class="am-pre-scrollable"><code class="codewrapper hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CameraPreview</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">SurfaceView</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">SurfaceHolder</span>.<span class="hljs-title">Callback</span> </span>{
+  <span class="hljs-keyword">private</span> SurfaceHolder mHolder;
+  <span class="hljs-keyword">private</span> Camera mCamera;
+
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">CameraPreview</span><span class="hljs-params">(Context context, Camera camera)</span> </span>{
+     <span class="hljs-keyword">super</span>(context);
+     mCamera = camera;
+     mHolder = getHolder();
+     mHolder.addCallback(<span class="hljs-keyword">this</span>);
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">surfaceCreated</span><span class="hljs-params">(SurfaceHolder holder)</span> </span>{
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">surfaceDestroyed</span><span class="hljs-params">(SurfaceHolder holder)</span> </span>{
+     <span class="hljs-comment">// empty. Take care of releasing the Camera preview in your activity.</span>
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">surfaceChanged</span><span class="hljs-params">(SurfaceHolder holder, <span class="hljs-keyword">int</span> format, <span class="hljs-keyword">int</span> w, <span class="hljs-keyword">int</span> h)</span> </span>{
+     <span class="hljs-comment">// If your preview can change or rotate, take care of those events here.</span>
+     <span class="hljs-comment">// Make sure to stop the preview before resizing or reformatting it.</span>
+     <span class="hljs-keyword">if</span> (mHolder.getSurface() == <span class="hljs-keyword">null</span>){
+         <span class="hljs-comment">// preview surface does not exist</span>
+         <span class="hljs-keyword">return</span>;
+     }
+     <span class="hljs-comment">// stop preview before making changes</span>
+     <span class="hljs-keyword">try</span> {
+         mCamera.stopPreview();
+     } <span class="hljs-keyword">catch</span> (Exception e){
+         <span class="hljs-comment">// ignore: tried to stop a non-existent preview</span>
+     }
+     <span class="hljs-comment">// start preview with new settings</span>
+     <span class="hljs-keyword">try</span> {
+         mCamera.setPreviewDisplay(holder);
+         mCamera.setPreviewCallback(previewCallback);
+         mCamera.startPreview();
+     } <span class="hljs-keyword">catch</span> (Exception e){
+         Log.d(<span class="hljs-string">"CameraPreviewError"</span>, <span class="hljs-string">"Error starting camera preview: "</span> + e.getMessage());
+     }
+  }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">initSurfaceView</span><span class="hljs-params">()</span> </span>{
+   <span class="hljs-keyword">int</span> preview_width = getResources().getDimensionPixelSize(R.dimen.preview_width);
+   <span class="hljs-keyword">int</span> preview_height = getResources().getDimensionPixelSize(R.dimen.preview_height);
+   FrameLayout.LayoutParams tp_inet = <span class="hljs-keyword">new</span> FrameLayout.LayoutParams(preview_width, preview_height);<span class="hljs-comment">//定义显示组件参数</span>
+   FrameLayout.LayoutParams tp_local = <span class="hljs-keyword">new</span> FrameLayout.LayoutParams(preview_width/<span class="hljs-number">4</span>, preview_height/<span class="hljs-number">4</span>, Gravity.RIGHT);<span class="hljs-comment">//定义显示组件参数</span>
+   tp_local.rightMargin = preview_width/<span class="hljs-number">16</span>;
+   tp_local.topMargin = preview_height/<span class="hljs-number">16</span>;
+   FrameLayout frameLayout1 = <span class="hljs-keyword">new</span> FrameLayout(<span class="hljs-keyword">this</span>);
+   FrameLayout frameLayout2 = <span class="hljs-keyword">new</span> FrameLayout(<span class="hljs-keyword">this</span>);
+
+   ((FrameLayout) findViewById(R.id.preview_frame0)).addView(frameLayout1, tp_inet);
+   ((FrameLayout) findViewById(R.id.preview_frame0)).addView(frameLayout2, tp_local);
+
+   inetCameraPreview = <span class="hljs-keyword">new</span> SurfaceView(<span class="hljs-keyword">this</span>);
+   cameraPreview = <span class="hljs-keyword">new</span> CameraPreview(<span class="hljs-keyword">this</span>, camera);
+   frameLayout1.addView(inetCameraPreview);
+   frameLayout2.addView(cameraPreview);
+
+   surfaceHolder = inetCameraPreview.getHolder();
+   surfaceHolder.addCallback(<span class="hljs-keyword">new</span> SurfaceHolder.Callback() {
+       <span class="hljs-meta">@Override</span>
+       <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">surfaceCreated</span><span class="hljs-params">(SurfaceHolder holder)</span> </span>{
+           <span class="hljs-keyword">synchronized</span> (videoSurfaceMutex) {
+               videoSurfaceMutex.notify();
+               isInetSurfaceViewChanged = <span class="hljs-keyword">false</span>;
+           }
+       }
+
+       <span class="hljs-meta">@Override</span>
+       <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">surfaceChanged</span><span class="hljs-params">(SurfaceHolder holder, <span class="hljs-keyword">int</span> format, <span class="hljs-keyword">int</span> width, <span class="hljs-keyword">int</span> height)</span> </span>{
+       }
+
+       <span class="hljs-meta">@Override</span>
+       <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">surfaceDestroyed</span><span class="hljs-params">(SurfaceHolder holder)</span> </span>{
+           <span class="hljs-keyword">synchronized</span> (videoSurfaceMutex) {
+               isInetSurfaceViewChanged = <span class="hljs-keyword">true</span>;
+           }
+       }
+   });
+   ((FrameLayout) findViewById(R.id.preview_frame0)).bringChildToFront(frameLayout2);
+}</code></pre>
+        <h2>重力控制</h2>
+        <p>实现重力控制需要使用到手机自带的加速度传感器，SensorManager 为我们提供了访问设备感应器的接口。通过传入参数SENSOR_SERVICE
+          获得一个该类型的实例，然后通过getDefaultSensor传入TYPE_ACCELEROMETER参数为加速度传感器注册监听器，之后我们重载了
+          onSensorChanged(SensorEvent event)这一方法，当手机位置变化时，我们能够实时地获取手机当前重力加速度在x，y，z轴上的分量。
+          通过这些分量，我们可以判断当前手机的姿势状态，并将这些状态与我们规定的8个方向对应起来。同时，由于手机可能会有晃动，
+          我们为每一个设定方向提供了必要的缓冲区，使得小车不会因为控制端偶然的抖动而运转。</p>
+        <pre class="am-pre-scrollable"><code class="codewrapper hljs cs"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onGravity</span>(<span class="hljs-params"></span>) </span>{
+          sensorManager.registerListener(sensorEventListener, sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL);
+      }
+
+<span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">offGravity</span>(<span class="hljs-params"></span>) </span>{
+    sensorManager.unregisterListener(sensorEventListener);
+}
+
+<span class="hljs-keyword">private</span> SensorEventListener sensorEventListener = <span class="hljs-keyword">new</span> SensorEventListener() {
+    @<span class="hljs-function">Override
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSensorChanged</span>(<span class="hljs-params">SensorEvent <span class="hljs-keyword">event</span></span>) </span>{
+
+        <span class="hljs-keyword">float</span> x = <span class="hljs-keyword">event</span>.values[<span class="hljs-number">0</span>];  <span class="hljs-comment">// x轴方向的重力加速度，向左为正</span>
+        <span class="hljs-keyword">float</span> y = <span class="hljs-keyword">event</span>.values[<span class="hljs-number">1</span>];  <span class="hljs-comment">// y轴方向的重力加速度，向后为正</span>
+        <span class="hljs-keyword">float</span> z = <span class="hljs-keyword">event</span>.values[<span class="hljs-number">2</span>];  <span class="hljs-comment">// z轴方向的重力加速度，向下为正</span>
+
+        <span class="hljs-keyword">if</span> (x&lt;<span class="hljs-number">-3</span>) {
+            <span class="hljs-keyword">if</span> (z &gt;= <span class="hljs-number">7</span>) {
+                textView_INFO.setText(<span class="hljs-string">"重力控制：向右"</span>);
+                sendMessage(<span class="hljs-string">"RIGHT"</span>);
+            } <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> (<span class="hljs-params">z &lt;= <span class="hljs-number">3</span></span>) </span>{
+                textView_INFO.setText(<span class="hljs-string">"重力控制：向右后"</span>);
+                sendMessage(<span class="hljs-string">"BRIGHT"</span>);;
+            } <span class="hljs-keyword">else</span> {
+                textView_INFO.setText(<span class="hljs-string">"重力控制：右旋转"</span>);
+                sendMessage(<span class="hljs-string">"DEX"</span>);
+            }
+        } <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> (<span class="hljs-params">x&gt;<span class="hljs-number">3</span></span>) </span>{
+            <span class="hljs-keyword">if</span> (z &gt;= <span class="hljs-number">7</span>) {
+                textView_INFO.setText(<span class="hljs-string">"重力控制：向左"</span>);
+                sendMessage(<span class="hljs-string">"LEFT"</span>);
+            } <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> (<span class="hljs-params">z &lt;= <span class="hljs-number">3</span></span>) </span>{
+                textView_INFO.setText(<span class="hljs-string">"重力控制：向左后"</span>);
+                sendMessage(<span class="hljs-string">"BLEFT"</span>);
+            } <span class="hljs-keyword">else</span> {
+                textView_INFO.setText(<span class="hljs-string">"重力控制：左旋转"</span>);
+                sendMessage(<span class="hljs-string">"LEV"</span>);
+            }
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">if</span> (z &gt;= <span class="hljs-number">7</span>) {
+                textView_INFO.setText(<span class="hljs-string">"重力控制：向前"</span>);
+                sendMessage(<span class="hljs-string">"UP"</span>);
+            } <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> (<span class="hljs-params">z &lt;= <span class="hljs-number">3</span></span>) </span>{
+                textView_INFO.setText(<span class="hljs-string">"重力控制：向后"</span>);
+                sendMessage(<span class="hljs-string">"DOWN"</span>);
+            } <span class="hljs-keyword">else</span> {
+                textView_INFO.setText(<span class="hljs-string">"重力控制：停止"</span>);
+                sendMessage(<span class="hljs-string">"STOP"</span>);
+            }
+        }
+    }
+
+    @<span class="hljs-function">Override
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onAccuracyChanged</span>(<span class="hljs-params">Sensor sensor, <span class="hljs-keyword">int</span> accuracy</span>) </span>{}
+};</code></pre>
+        <h2>语音控制</h2>
+        <p>在这一部分的开发过程中，我们使用了科大讯飞开放平台提供的在线语音识别技术，通过申请注册，我们下载了包含语音听写服务的SDK。
+            语音识别过程需要设备连接互联网，同时可在讯飞提供的语音云控制端监测App使用情况。通过点击界面中的语音识别按钮，系统开始录音，
+            在用户描述完指令后，音量大小由正值转变为0，系统自动停止录音，并进行识别。当讯飞将语音识别结果以json格式传回本地时，
+            我们采用google开发的gson库解析数据包，得到以字符串形式表示的识别结果，通过模糊匹配，我们可以较为精准地识别“前进”、“后退”等
+            全部9种小车支持的指令，然后根据识别的结果来发送蓝牙数据。</p>
+        <pre class="am-pre-scrollable"><code class="codewrapper hljs cs"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">initSpeech</span>(<span class="hljs-params">final Context context</span>) </span>{
+        RecognizerDialog mDialog = <span class="hljs-keyword">new</span> RecognizerDialog(context, <span class="hljs-literal">null</span>);
+        mDialog.setParameter(SpeechConstant.LANGUAGE, <span class="hljs-string">"zh_cn"</span>);
+        mDialog.setParameter(SpeechConstant.ACCENT, <span class="hljs-string">"mandarin"</span>);
+        mDialog.setListener(<span class="hljs-keyword">new</span> RecognizerDialogListener() {
+            @<span class="hljs-function">Override
+            <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onResult</span>(<span class="hljs-params">RecognizerResult recognizerResult, boolean isLast</span>) </span>{
+                <span class="hljs-keyword">if</span> (!isLast) {
+                    String result = parseVoice(recognizerResult.getResultString());
+                    <span class="hljs-keyword">if</span>(result.<span class="hljs-keyword">equals</span>(<span class="hljs-string">"向前"</span>)){
+                        textView_INFO.setText(<span class="hljs-string">"语音控制：向前"</span>);
+                        sendMessage(<span class="hljs-string">"UP"</span>);
+                    }<span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span>(<span class="hljs-params">result.<span class="hljs-keyword">equals</span>(<span class="hljs-string">"向左"</span></span>))</span>{
+                        textView_INFO.setText(<span class="hljs-string">"语音控制：向左"</span>);
+                        sendMessage(<span class="hljs-string">"LEFT"</span>);
+                    }<span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span>(<span class="hljs-params">result.<span class="hljs-keyword">equals</span>(<span class="hljs-string">"向右"</span></span>))</span>{
+                        textView_INFO.setText(<span class="hljs-string">"语音控制：向右"</span>);
+                        sendMessage(<span class="hljs-string">"RIGHT"</span>);
+                    }<span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span>(<span class="hljs-params">result.<span class="hljs-keyword">equals</span>(<span class="hljs-string">"向后"</span></span>))</span>{
+                        textView_INFO.setText(<span class="hljs-string">"语音控制：向后"</span>);
+                        sendMessage(<span class="hljs-string">"DOWN"</span>);
+                    }<span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span>(<span class="hljs-params">result.<span class="hljs-keyword">equals</span>(<span class="hljs-string">"左旋转"</span></span>))</span>{
+                        textView_INFO.setText(<span class="hljs-string">"语音控制：左旋转"</span>);
+                        sendMessage(<span class="hljs-string">"LEV"</span>);
+                    }<span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span>(<span class="hljs-params">result.<span class="hljs-keyword">equals</span>(<span class="hljs-string">"右旋转"</span></span>))</span>{
+                        textView_INFO.setText(<span class="hljs-string">"语音控制：右旋转"</span>);
+                        sendMessage(<span class="hljs-string">"DEX"</span>);
+                    }<span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span>(<span class="hljs-params">result.<span class="hljs-keyword">equals</span>(<span class="hljs-string">"向左后"</span></span>))</span>{
+                        textView_INFO.setText(<span class="hljs-string">"语音控制：向左后"</span>);
+                        sendMessage(<span class="hljs-string">"BLEFT"</span>);
+                    }<span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span>(<span class="hljs-params">result.<span class="hljs-keyword">equals</span>(<span class="hljs-string">"向右后"</span></span>)))</span>{
+                        textView_INFO.setText(<span class="hljs-string">"语音控制：向右后"</span>);
+                        sendMessage(<span class="hljs-string">"BRIGHT"</span>);
+                    }<span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span>(<span class="hljs-params">result.<span class="hljs-keyword">equals</span>(<span class="hljs-string">"停止"</span></span>))</span>{
+                        textView_INFO.setText(<span class="hljs-string">"语音控制：停止"</span>);
+                        sendMessage(<span class="hljs-string">"STOP"</span>);
+                    }<span class="hljs-keyword">else</span>{
+                        Log.e(<span class="hljs-string">"Text"</span>,result);
+                        textView_INFO.setText(<span class="hljs-string">"语音控制：未识别的指令"</span>);
+                    }
+                }
+            }
+            @<span class="hljs-function">Override
+            <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onError</span>(<span class="hljs-params">SpeechError speechError</span>) </span>{}
+        });
+        mDialog.show();
+    }
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">parseVoice</span>(<span class="hljs-params">String resultString</span>) </span>{
+   Gson gson = <span class="hljs-keyword">new</span> Gson();
+   Voice voiceBean = gson.fromJson(resultString, Voice.class);
+   StringBuffer sb = <span class="hljs-keyword">new</span> StringBuffer();
+   ArrayList<voice.wsbean> ws = voiceBean.ws;
+   <span class="hljs-keyword">for</span> (Voice.WSBean wsBean : ws) {
+       String word = wsBean.cw.<span class="hljs-keyword">get</span>(<span class="hljs-number">0</span>).w;
+       sb.append(word);
+   }
+   <span class="hljs-keyword">return</span> sb.toString();
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Voice</span> {
+   <span class="hljs-keyword">public</span> ArrayList<wsbean> ws;
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">WSBean</span> {
+       <span class="hljs-keyword">public</span> ArrayList<cwbean> cw;
+   }
+   <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">CWBean</span> {
+       <span class="hljs-keyword">public</span> String w;
+   }
+}</cwbean></wsbean></voice.wsbean></code></pre>
+        <h2>手势控制</h2>
+        <p>为了实现手势控制，我们使用了Android系统提供的GestureDetector，通过重载onDoubleTap(MotionEvent event)这一方法，控制端会在用户
+          双击屏幕时发送停止指令；通过重载onFling(MotionEvent event1, MotionEvent event2, float velocityX, float velocityY)
+          这一方法，控制端通过比对event1与event2的坐标，与设定的8个方向对应起来，并将识别结果发送给被控端。</p>
+        <pre class="am-pre-scrollable"><code class="codewrapper hljs java"><span class="hljs-keyword">private</span> GestureDetector gestureDetector = <span class="hljs-keyword">new</span> GestureDetector(<span class="hljs-keyword">null</span>, <span class="hljs-keyword">new</span> GestureDetector.SimpleOnGestureListener() {
+          <span class="hljs-meta">@Override</span>
+          <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">onDoubleTap</span><span class="hljs-params">(MotionEvent e)</span> </span>{
+              textView_INFO.setText(<span class="hljs-string">"手势控制：停止"</span>);
+              sendMessage(<span class="hljs-string">"STOP"</span>);
+              <span class="hljs-keyword">return</span> <span class="hljs-keyword">super</span>.onDoubleTap(e);
+          }
+
+          <span class="hljs-meta">@Override</span>
+          <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">onFling</span><span class="hljs-params">(MotionEvent e1, MotionEvent e2, <span class="hljs-keyword">float</span> velocityX, <span class="hljs-keyword">float</span> velocityY)</span> </span>{
+              <span class="hljs-keyword">int</span> minDistance = <span class="hljs-number">100</span>;
+              <span class="hljs-keyword">int</span> minVelocity = <span class="hljs-number">750</span>;
+              <span class="hljs-keyword">if</span> (e1.getY()-e2.getY()&gt;minDistance &amp;&amp; Math.abs(velocityY)&gt;minVelocity) {
+                  <span class="hljs-keyword">if</span> (e1.getX() - e2.getX() &gt; minDistance &amp;&amp; Math.abs(velocityX) &gt; minVelocity) {
+                      textView_INFO.setText(<span class="hljs-string">"手势控制：向左"</span>);
+                      sendMessage(<span class="hljs-string">"LEFT"</span>);
+                  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (e2.getX() - e1.getX() &gt; minDistance &amp;&amp; Math.abs(velocityX) &gt; minVelocity) {
+                      textView_INFO.setText(<span class="hljs-string">"手势控制：向右"</span>);
+                      sendMessage(<span class="hljs-string">"RIGHT"</span>);
+                  } <span class="hljs-keyword">else</span> {
+                      textView_INFO.setText(<span class="hljs-string">"手势控制：向前"</span>);
+                      sendMessage(<span class="hljs-string">"UP"</span>);
+                  }
+              } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (e2.getY()-e1.getY()&gt;minDistance &amp;&amp; Math.abs(velocityY)&gt;minVelocity) {
+                  <span class="hljs-keyword">if</span> (e1.getX() - e2.getX() &gt; minDistance &amp;&amp; Math.abs(velocityX) &gt; minVelocity) {
+                      textView_INFO.setText(<span class="hljs-string">"手势控制：向左后"</span>);
+                      sendMessage(<span class="hljs-string">"BLEFT"</span>);
+                  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (e2.getX() - e1.getX() &gt; minDistance &amp;&amp; Math.abs(velocityX) &gt; minVelocity) {
+                      textView_INFO.setText(<span class="hljs-string">"手势控制：向右后"</span>);
+                      sendMessage(<span class="hljs-string">"BRIGHT"</span>);
+                  } <span class="hljs-keyword">else</span> {
+                      textView_INFO.setText(<span class="hljs-string">"手势控制：向后"</span>);
+                      sendMessage(<span class="hljs-string">"DOWN"</span>);
+                  }
+              } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (e1.getX()-e2.getX()&gt;minDistance &amp;&amp; Math.abs(velocityX)&gt;minVelocity) {
+                  textView_INFO.setText(<span class="hljs-string">"手势控制：左旋转"</span>);
+                  sendMessage(<span class="hljs-string">"LEV"</span>);
+              } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (e2.getX()-e1.getX()&gt;minDistance &amp;&amp; Math.abs(velocityX)&gt;minVelocity) {
+                  textView_INFO.setText(<span class="hljs-string">"手势控制：右旋转"</span>);
+                  sendMessage(<span class="hljs-string">"DEX"</span>);
+              }
+              <span class="hljs-keyword">return</span> <span class="hljs-keyword">super</span>.onFling(e1, e2, velocityX, velocityY);
+          }
+      });</code></pre>
+        <h2>路径绘制</h2>
+        <p>我们通过继承View类实现了自己的Drawl类，当用户在控制端屏幕上绘制任意路径后，该类会在覆盖屏幕的位图上重绘路径，这一过程在重载
+            onTouchEvent(MotionEvent event)中实现，同时，控制端会根据捕捉到的动作，计算坐标之间的相对位置，并以路径的变化角度向小车发送
+            “前进”、“向左”、“向右”与“停止”这4个命令。由于小车两侧马达提供的动力不同，再加上对路径角度的简化处理，导致小车行进方向与复杂的绘制
+            路径不能完全吻合，但在简单路径上小车的表现令人满意。</p>
+        <pre class="am-pre-scrollable"><code class="codewrapper hljs cs"><span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> Rpointer=<span class="hljs-number">0</span>;
+Timer timer;
+<span class="hljs-keyword">int</span> timerAlive=<span class="hljs-number">0</span>;
+
+<span class="hljs-keyword">private</span> GestureDetector gestureDetector = <span class="hljs-keyword">new</span> GestureDetector(<span class="hljs-literal">null</span>, <span class="hljs-keyword">new</span> GestureDetector.SimpleOnGestureListener() {
+    @<span class="hljs-function">Override
+    <span class="hljs-keyword">public</span> boolean <span class="hljs-title">onDoubleTap</span>(<span class="hljs-params">MotionEvent e</span>) </span>{
+        textView_INFO.setText(<span class="hljs-string">"路径绘制：停止"</span>);
+        sendMessage(<span class="hljs-string">"STOP"</span>);
+        routePointX.clear();
+        routePointY.clear();
+        routelength=<span class="hljs-number">0</span>;
+        <span class="hljs-keyword">if</span> (timerAlive==<span class="hljs-number">1</span>) {
+            timerAlive = <span class="hljs-number">0</span>;
+        }
+        <span class="hljs-keyword">return</span> super.onDoubleTap(e);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> boolean <span class="hljs-title">onFling</span>(<span class="hljs-params">MotionEvent e1, MotionEvent e2, <span class="hljs-keyword">float</span> velocityX, <span class="hljs-keyword">float</span> velocityY</span>) </span>{
+        <span class="hljs-comment">// String info = String.format("\n\ne1: %s\n\ne2: %s\n\nvelocityX: %f\nvelocityY: %f", e1.toString(), e2.toString(), velocityX, velocityY);</span>
+        <span class="hljs-keyword">int</span> minDistance = <span class="hljs-number">100</span>;
+        <span class="hljs-keyword">int</span> minVelocity = <span class="hljs-number">750</span>;
+        textView_INFO.setText(<span class="hljs-string">"LET'S GO!"</span>);
+        Rpointer=<span class="hljs-number">0</span>;
+        <span class="hljs-keyword">if</span> (timerAlive==<span class="hljs-number">0</span>) {
+            timerAlive=<span class="hljs-number">1</span>;
+        }
+        <span class="hljs-keyword">return</span> super.onFling(e1, e2, velocityX, velocityY);
+    }
+});
+
+<span class="hljs-comment">//控制</span>
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> posx=<span class="hljs-number">0</span>;
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> posy=<span class="hljs-number">0</span>;
+@<span class="hljs-function">Override
+<span class="hljs-keyword">public</span> boolean <span class="hljs-title">dispatchTouchEvent</span>(<span class="hljs-params">@NonNull MotionEvent ev</span>) </span>{
+    posx=(<span class="hljs-keyword">int</span>)ev.getX();
+    posy=(<span class="hljs-keyword">int</span>)ev.getY();
+    <span class="hljs-keyword">if</span> (posx &gt;= <span class="hljs-number">0</span> &amp;&amp; posx &lt;= <span class="hljs-number">425</span> &amp;&amp; posy &gt;= <span class="hljs-number">1400</span> &amp;&amp; posy &lt;= <span class="hljs-number">1900</span>) {
+        <span class="hljs-keyword">if</span> (timerAlive==<span class="hljs-number">1</span>) {
+            timer.cancel(); <span class="hljs-comment">//退出计时器</span>
+            timerAlive=<span class="hljs-number">0</span>;
+        }
+        RouteActivity.<span class="hljs-keyword">this</span>.finish();
+        Intent intent = <span class="hljs-keyword">new</span> Intent();
+        Toast.makeText(getApplicationContext(), R.<span class="hljs-keyword">string</span>.action_Control, Toast.LENGTH_SHORT).show();
+        intent.setClass(<span class="hljs-keyword">this</span>, ControlActivity.class);
+        <span class="hljs-keyword">this</span>.startActivity(intent);
+    }
+    gestureDetector.onTouchEvent(ev);
+    routePointX.<span class="hljs-keyword">add</span>((Integer)posx);
+    routePointY.<span class="hljs-keyword">add</span>((Integer)posy);
+    ++routelength;
+    <span class="hljs-keyword">return</span> super.dispatchTouchEvent(ev);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run_car</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">int</span> posx=routePointX.<span class="hljs-keyword">get</span>(Rpointer+<span class="hljs-number">1</span>);
+    <span class="hljs-keyword">int</span> posy=routePointY.<span class="hljs-keyword">get</span>(Rpointer+<span class="hljs-number">1</span>);
+    <span class="hljs-keyword">int</span> startpointx=routePointX.<span class="hljs-keyword">get</span>(Rpointer);
+    <span class="hljs-keyword">int</span> startpointy=routePointY.<span class="hljs-keyword">get</span>(Rpointer);
+    <span class="hljs-keyword">while</span> (posx==startpointx &amp;&amp; posy==startpointy) {
+        ++Rpointer;
+        <span class="hljs-keyword">if</span> (Rpointer+<span class="hljs-number">1</span>&gt;=routelength) {
+            textView_INFO.setText(<span class="hljs-string">"路径绘制：停止"</span>);
+            sendMessage(<span class="hljs-string">"STOP"</span>);
+            <span class="hljs-keyword">if</span> (timerAlive==<span class="hljs-number">1</span>) {
+                timerAlive=<span class="hljs-number">0</span>;
+            }
+            routePointX.clear();
+            routePointY.clear();
+            routelength=<span class="hljs-number">0</span>;
+            <span class="hljs-keyword">return</span>;
+        }
+        posx=routePointX.<span class="hljs-keyword">get</span>(Rpointer+<span class="hljs-number">1</span>);
+        posy=routePointY.<span class="hljs-keyword">get</span>(Rpointer+<span class="hljs-number">1</span>);
+        startpointx=routePointX.<span class="hljs-keyword">get</span>(Rpointer);
+        startpointy=routePointY.<span class="hljs-keyword">get</span>(Rpointer);
+    }
+    <span class="hljs-keyword">double</span> tann=Math.atan2(posy-startpointy,posx-startpointx);
+    <span class="hljs-keyword">int</span> next_dir=<span class="hljs-number">0</span>;
+    <span class="hljs-keyword">if</span> (tann&lt;=<span class="hljs-number">2.7489</span> &amp;&amp; tann&gt;<span class="hljs-number">1.9635</span>) {
+        <span class="hljs-comment">// UP RIGHT</span>
+        next_dir=<span class="hljs-number">7</span>;
+    } <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> (<span class="hljs-params">tann&lt;=<span class="hljs-number">1.9635</span> &amp;&amp; tann&gt;<span class="hljs-number">1.1781</span></span>) </span>{
+        <span class="hljs-comment">// UP</span>
+        next_dir=<span class="hljs-number">0</span>;
+    } <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> (<span class="hljs-params">tann&lt;=<span class="hljs-number">1.1781</span> &amp;&amp; tann&gt;<span class="hljs-number">0.3927</span></span>) </span>{
+        <span class="hljs-comment">// LEFT</span>
+        next_dir=<span class="hljs-number">1</span>;
+    } <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> (<span class="hljs-params">tann&lt;=<span class="hljs-number">0.3927</span> &amp;&amp; tann&gt;<span class="hljs-number">-0.3927</span></span>) </span>{
+        <span class="hljs-comment">// LEFT</span>
+        next_dir=<span class="hljs-number">2</span>;
+    } <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> (<span class="hljs-params">tann&lt;=<span class="hljs-number">-0.3927</span> &amp;&amp; tann&gt;<span class="hljs-number">-1.1781</span></span>) </span>{
+        <span class="hljs-comment">// LEFT</span>
+        next_dir=<span class="hljs-number">3</span>;
+    } <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> (<span class="hljs-params">tann&lt;=<span class="hljs-number">-1.1781</span> &amp;&amp; tann&gt;<span class="hljs-number">-1.9635</span></span>) </span>{
+        <span class="hljs-comment">// LEFT</span>
+        next_dir=<span class="hljs-number">4</span>;
+    } <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> (<span class="hljs-params">tann&lt;=<span class="hljs-number">-1.9635</span> &amp;&amp; tann&gt;<span class="hljs-number">-2.7489</span></span>) </span>{
+        <span class="hljs-comment">// RIGHT</span>
+        next_dir=<span class="hljs-number">5</span>;
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-comment">// BACK</span>
+        next_dir=<span class="hljs-number">6</span>;
+    }
+    <span class="hljs-keyword">if</span> (next_dir==car_dir) {
+        textView_INFO.setText(<span class="hljs-string">"路径绘制：向前"</span>);
+        sendMessage(<span class="hljs-string">"UP"</span>);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> (<span class="hljs-params">(next_dir-car_dir+<span class="hljs-number">8</span></span>)%8&lt;4) </span>{
+        textView_INFO.setText(<span class="hljs-string">"路径绘制：向左"</span>);
+        sendMessage(<span class="hljs-string">"LEFT"</span>);
+        car_dir=(car_dir+<span class="hljs-number">1</span>)%<span class="hljs-number">8</span>;
+    }
+    <span class="hljs-keyword">else</span> {
+        textView_INFO.setText(<span class="hljs-string">"路径绘制：向右"</span>);
+        sendMessage(<span class="hljs-string">"RIGHT"</span>);
+        car_dir=(car_dir+<span class="hljs-number">7</span>)%<span class="hljs-number">8</span>;
+    }
+    ImageButton smallbutt=(ImageButton)findViewById(R.id.button_touch5);
+    {
+        smallbutt.setLeft(startpointx<span class="hljs-number">-60</span>);
+        smallbutt.setTop(startpointy<span class="hljs-number">-60</span>);
+        smallbutt.setRight(startpointx+<span class="hljs-number">60</span>);
+        smallbutt.setBottom(startpointy+<span class="hljs-number">60</span>);
+    }
+    ++Rpointer;
+    <span class="hljs-keyword">if</span> (Rpointer+<span class="hljs-number">1</span>&gt;=routelength) {
+        textView_INFO.setText(<span class="hljs-string">"路径绘制：停止"</span>);
+        sendMessage(<span class="hljs-string">"STOP"</span>);
+        <span class="hljs-keyword">if</span> (timerAlive==<span class="hljs-number">1</span>) {
+            timerAlive=<span class="hljs-number">0</span>;
+        }
+        routePointX.clear();
+        routePointY.clear();
+        routelength=<span class="hljs-number">0</span>;
+    }
+}</code></pre>
+        <h2>向量控制</h2>
+        <p>为了实现向量控制，我们重载了dispatchTouchEvent(MotionEvent event)这一方法，通过比对起点和终点的坐标，我们计算得出用户指定的方向，
+          并在屏幕上以3个由小到大的箭头标识出来，同时向受控小车发送指令。当用户双击屏幕或者起点与终点距离较近时，受控端会向小车发出停止指令。</p>
+        <pre class="am-pre-scrollable"><code class="codewrapper hljs cpp"><span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> posx=<span class="hljs-number">0</span>;
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> posy=<span class="hljs-number">0</span>;
+@<span class="hljs-function">Override
+<span class="hljs-keyword">public</span> boolean <span class="hljs-title">dispatchTouchEvent</span><span class="hljs-params">(@NonNull MotionEvent ev)</span> </span>{
+    posx=(<span class="hljs-keyword">int</span>)ev.getX();
+    posy=(<span class="hljs-keyword">int</span>)ev.getY();
+    <span class="hljs-keyword">if</span> (posx &gt;= <span class="hljs-number">0</span> &amp;&amp; posx &lt;= <span class="hljs-number">425</span> &amp;&amp; posy &gt;= <span class="hljs-number">1400</span> &amp;&amp; posy &lt;= <span class="hljs-number">1900</span>) {
+        VectorActivity.<span class="hljs-keyword">this</span>.finish();
+        Intent intent = <span class="hljs-keyword">new</span> Intent();
+        Toast.makeText(getApplicationContext(), R.<span class="hljs-built_in">string</span>.action_Control, Toast.LENGTH_SHORT).show();
+        intent.setClass(<span class="hljs-keyword">this</span>, ControlActivity.<span class="hljs-keyword">class</span>);
+        <span class="hljs-keyword">this</span>.startActivity(intent);
+    }
+    gestureDetector.onTouchEvent(ev);
+    <span class="hljs-keyword">if</span> (startpointexist==<span class="hljs-number">0</span>) {
+        startpointexist=<span class="hljs-number">1</span>;
+        startpointx=posx;
+        startpointy=posy;
+    }
+    <span class="hljs-keyword">else</span> {
+        ImageButton smallbutt1=(ImageButton)findViewById(R.id.vector1);
+        ImageButton smallbutt2=(ImageButton)findViewById(R.id.vector2);
+        ImageButton smallbutt3=(ImageButton)findViewById(R.id.vector3);
+        <span class="hljs-keyword">double</span> tann=Math.<span class="hljs-built_in">atan2</span>(posy-startpointy,posx-startpointx);
+        <span class="hljs-keyword">if</span> ((posy-startpointy) * (posy-startpointy) + (posx-startpointx) * (posx-startpointx) &lt; <span class="hljs-number">6400</span>) {
+            textView_INFO.setText(<span class="hljs-string">"向量控制：停止"</span>);
+            sendMessage(<span class="hljs-string">"STOP"</span>);
+            smallbutt1.setBackgroundResource(R.drawable.stop);
+            smallbutt2.setBackgroundResource(R.drawable.stop);
+            smallbutt3.setBackgroundResource(R.drawable.stop);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (tann&lt;=<span class="hljs-number">2.7489</span> &amp;&amp; tann&gt;<span class="hljs-number">1.9635</span>) {
+            textView_INFO.setText(<span class="hljs-string">"向量控制：向左后"</span>);
+            sendMessage(<span class="hljs-string">"BLEFT"</span>);
+            smallbutt1.setBackgroundResource(R.drawable.vector_5);
+            smallbutt2.setBackgroundResource(R.drawable.vector_5);
+            smallbutt3.setBackgroundResource(R.drawable.vector_5);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (tann&lt;=<span class="hljs-number">1.9635</span> &amp;&amp; tann&gt;<span class="hljs-number">1.1781</span>) {
+            textView_INFO.setText(<span class="hljs-string">"向量控制：向后"</span>);
+            sendMessage(<span class="hljs-string">"DOWN"</span>);
+            smallbutt1.setBackgroundResource(R.drawable.vector_4);
+            smallbutt2.setBackgroundResource(R.drawable.vector_4);
+            smallbutt3.setBackgroundResource(R.drawable.vector_4);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (tann&lt;=<span class="hljs-number">1.1781</span> &amp;&amp; tann&gt;<span class="hljs-number">0.3927</span>) {
+            textView_INFO.setText(<span class="hljs-string">"向量控制：向右后"</span>);
+            sendMessage(<span class="hljs-string">"BRIGHT"</span>);
+            smallbutt1.setBackgroundResource(R.drawable.vector_3);
+            smallbutt2.setBackgroundResource(R.drawable.vector_3);
+            smallbutt3.setBackgroundResource(R.drawable.vector_3);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (tann&lt;=<span class="hljs-number">0.3927</span> &amp;&amp; tann&gt;<span class="hljs-number">-0.3927</span>) {
+            textView_INFO.setText(<span class="hljs-string">"向量控制：右旋转"</span>);
+            sendMessage(<span class="hljs-string">"DEX"</span>);
+            smallbutt1.setBackgroundResource(R.drawable.vector_2);
+            smallbutt2.setBackgroundResource(R.drawable.vector_2);
+            smallbutt3.setBackgroundResource(R.drawable.vector_2);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (tann&lt;=<span class="hljs-number">-0.3927</span> &amp;&amp; tann&gt;<span class="hljs-number">-1.1781</span>) {
+            textView_INFO.setText(<span class="hljs-string">"向量控制：向右"</span>);
+            sendMessage(<span class="hljs-string">"RIGHT"</span>);
+            smallbutt1.setBackgroundResource(R.drawable.vector_1);
+            smallbutt2.setBackgroundResource(R.drawable.vector_1);
+            smallbutt3.setBackgroundResource(R.drawable.vector_1);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (tann&lt;=<span class="hljs-number">-1.1781</span> &amp;&amp; tann&gt;<span class="hljs-number">-1.9635</span>) {
+            textView_INFO.setText(<span class="hljs-string">"向量控制：向前"</span>);
+            sendMessage(<span class="hljs-string">"UP"</span>);
+            smallbutt1.setBackgroundResource(R.drawable.vector_0);
+            smallbutt2.setBackgroundResource(R.drawable.vector_0);
+            smallbutt3.setBackgroundResource(R.drawable.vector_0);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (tann&lt;=<span class="hljs-number">-1.9635</span> &amp;&amp; tann&gt;<span class="hljs-number">-2.7489</span>) {
+            textView_INFO.setText(<span class="hljs-string">"向量控制：向左"</span>);
+            sendMessage(<span class="hljs-string">"LEFT"</span>);
+            smallbutt1.setBackgroundResource(R.drawable.vector_7);
+            smallbutt2.setBackgroundResource(R.drawable.vector_7);
+            smallbutt3.setBackgroundResource(R.drawable.vector_7);
+        } <span class="hljs-keyword">else</span> {
+            textView_INFO.setText(<span class="hljs-string">"向量控制：左旋转"</span>);
+            sendMessage(<span class="hljs-string">"LEV"</span>);
+            smallbutt1.setBackgroundResource(R.drawable.vector_6);
+            smallbutt2.setBackgroundResource(R.drawable.vector_6);
+            smallbutt3.setBackgroundResource(R.drawable.vector_6);
+        }
+        smallbutt1.setLeft(posx<span class="hljs-number">-100</span>);
+        smallbutt1.setTop(posy<span class="hljs-number">-100</span>);
+        smallbutt1.setRight(posx+<span class="hljs-number">100</span>);
+        smallbutt1.setBottom(posy+<span class="hljs-number">100</span>);
+        smallbutt2.setLeft((posx+startpointx)/<span class="hljs-number">2</span><span class="hljs-number">-70</span>);
+        smallbutt2.setTop((posy+startpointy)/<span class="hljs-number">2</span><span class="hljs-number">-70</span>);
+        smallbutt2.setRight((posx+startpointx)/<span class="hljs-number">2</span>+<span class="hljs-number">70</span>);
+        smallbutt2.setBottom((posy+startpointy)/<span class="hljs-number">2</span>+<span class="hljs-number">70</span>);
+        smallbutt3.setLeft(startpointx<span class="hljs-number">-40</span>);
+        smallbutt3.setTop(startpointy<span class="hljs-number">-40</span>);
+        smallbutt3.setRight(startpointx+<span class="hljs-number">40</span>);
+        smallbutt3.setBottom(startpointy+<span class="hljs-number">40</span>);
+    }
+    <span class="hljs-keyword">return</span> super.dispatchTouchEvent(ev);
+}</code></pre>
+      </div>
+      <div class="am-u-sm-2 am-u-end"></div>
+    </div>
+
+    <div>
+      <div class="am-u-sm-2"></div>
+      <div class="am-u-sm-8 am-u-sm-offset-2">
+        <h1 id="analysis" name="analysis" class="h1modification">————测试分析————</h1>
+        <h2>测试情况</h2>
+        <p>小车能够完成基本的控制，基本控制情况如下：</p>
+          <div style="text-indent: 3em">实现Wifi互连功能，在同一局域网下两部手机自动进行识别连接。</div>
+          <div style="text-indent: 3em">实现双击视频回传功能，控制端手机能完整无误地接收到小车端手机所拍摄的景象。</div>
+          <div style="text-indent: 3em">实现按键基本控制功能，通过控制端手机的按键操作控制小车的方向，小车按照预定按键指示前进。</div>
+          <div style="text-indent: 3em">小车实现重力感应、语音识别、手势识别、任意路径规划以及向量规划控制等五个扩展功能且都运行良好。</div>
+          <div style="text-indent: 3em">实现重力感应功能，通过对手机重力的变换，使得小车实现八个方向的路线的控制。</div>
+          <div style="text-indent: 3em">实现语音识别功能，通过对手机语音的控制，手机自动识别语音所含语义，从而发送指令给小车，小车实现听声控制。</div>
+          <div style="text-indent: 3em">实现手势识别功能，通过手机对手势的识别，发送不同含义的指令到小车，实现手势控制小车。</div>
+          <div style="text-indent: 3em">实现任意路径规划功能，在手机上规划任意路径，小车能实现按照规划路径前进。</div>
+          <div style="text-indent: 3em">实现向量规划控制功能，手机上可以任意拖动向量实现对小车的控制。</div>
+
+        <p>以上功能测试情况良好，所有功能均测试通过。</p>
+
+        <h2>不足之处</h2>
+        <p>在基本功能的实现中仍会有一些小问题：</p>
+        <div style="text-indent: 3em">小车速度过快以及小车的转弯有些许偏差，可以通过修改单片机代码修正。</div>
+        <p>对于拓展部分，存在以下问题：</p>
+        <div style="text-indent: 3em">语音识别有延迟，导致小车会因速度过快偏离预定路线。</div>
+        <div style="text-indent: 3em">任意规划路径时的转弯因小车本身转弯的限制有些许偏差。</div>
+
+      </div>
+      <div class="am-u-sm-2"></div>
+    </div>
+
+    <div>
+      <div class="am-u-sm-2"></div>
+      <div class="am-u-sm-8 am-u-sm-offset-2">
+        <h1 id="gallery" name="gallery" class="h1modification">————视频图集————</h1>
+        <h2>演示视频</h2>
+          <div class="videowrapper">
+            <video controls="" style="width: 100%">
+              <source src="videos/test_kimi/test.mp4" type="video/mp4">
+            </video>
+          </div>
+        <h2>花絮视频</h2>
+          <div class="videowrapper">
+            <video controls="" style="width: 100%">
+              <source src="videos/test_kimi/test.mp4" type="video/mp4">
+            </video>
+          </div>
+        <h2>图片展示</h2>
+          <div class="am-slider am-slider-default" data-am-flexslider="">
+            
+          <div class="am-viewport" style="overflow: hidden; position: relative;"><ul class="am-slides" style="width: 1000%; transition-duration: 0s; transform: translate3d(-2538.67px, 0px, 0px);"><li class="clone" aria-hidden="true" style="width: 1269.33px; margin-right: 0px; float: left; display: block;"><img src="images/car03.JPG" draggable="false"></li>
+              <li class="" data-thumb-alt="" style="width: 1269.33px; margin-right: 0px; float: left; display: block;"><img src="images/car01.JPG" draggable="false"></li>
+              <li data-thumb-alt="" style="width: 1269.33px; margin-right: 0px; float: left; display: block;" class="am-active-slide"><img src="images/car02.JPG" draggable="false"></li>
+              <li data-thumb-alt="" style="width: 1269.33px; margin-right: 0px; float: left; display: block;"><img src="images/car03.JPG" draggable="false"></li>
+            <li class="clone" aria-hidden="true" style="width: 1269.33px; margin-right: 0px; float: left; display: block;"><img src="images/car01.JPG" draggable="false"></li></ul></div><ol class="am-control-nav am-control-paging"><li><a href="#" class="">1</a><i></i></li><li><a href="#" class="am-active">2</a><i></i></li><li><a href="#">3</a><i></i></li></ol><ul class="am-direction-nav"><li class="am-nav-prev"><a class="am-prev" href="#"> </a></li><li class="am-nav-next"><a class="am-next" href="#"> </a></li></ul></div>
+      </div>
+      <div class="am-u-sm-2 am-u-end"></div>
+    </div>
+
+    <div>
+      <div class="am-u-sm-2"></div>
+      <div class="am-u-sm-8 am-u-sm-offset-2">
+        <h1 id="links" name="links" class="h1modification">————下载链接————</h1>
+        <div class="textwrapper">
+          <a href="files/MyIvc.zip" download="MyIvc_Android">Android代码</a><br>
+          <a href="files/C20.ino" download="MyIvc_Micro">单片机代码</a><br>
+          <a href="videos/demo.mp4" download="video1">演示视频</a><br>
+          <a href="videos/extras.mp4" download="video1">花絮视频</a>
+        </div>
+      </div>
+      <div class="am-u-sm-2 am-u-end"></div>
+    </div>
+
+  </div>
+<div data-am-widget="gotop" class="am-gotop am-gotop-fixed am-no-layout am-active">
+  <a href="#top" title="回到顶部">
+    <span class="am-gotop-title">回到顶部</span>
+    <i class="am-gotop-icon am-icon-chevron-up"></i>
+  </a>
+</div>
+<footer class="am-g am-g-collapse" style="bottom: 0; width: 100%; margin-top: 30px;">
+  <div class="am-u-sm-2"></div>
+  <div class="am-u-sm-8 am-u-sm-offset-2">
+    <hr>
+    <div style="display: inline-block">
+      <span style="color:#999">
+        科创3C-第20小组展示
+      </span><br>
+      <span style="color:#999">
+        © 2016~2017 KC3C-2016-AUT-20. Powered by Amaze UI.
+      </span>
+    </div>
+    <div style="display: inline-block;float: right">
+      <button type="button" class="am-btn am-btn-default am-btn-sm" style="border:1px transparent; background-color: transparent; color:#999" data-am-modal="{target: '#my-alert1'}">
+        联系我们
+      </button>
+      <div class="am-modal am-modal-alert" id="my-alert1">
+        <div class="am-modal-dialog">
+          <div class="am-modal-hd">联系我们</div>
+          <div class="am-modal-bd">
+            Email：alexzhangfm@126.com
+          </div>
+          <div class="am-modal-footer">
+            <span class="am-modal-btn">确定</span>
+          </div>
+        </div>
+      </div>
+
+      <span style="color:#999">|</span>
+
+      <button type="button" class="am-btn am-btn-default am-btn-sm" style="border:1px transparent; background-color: transparent; color:#999" data-am-modal="{target: '#my-alert2'}">
+        关于
+      </button>
+
+      <div class="am-modal am-modal-alert" tabindex="-1" id="my-alert2">
+        <div class="am-modal-dialog">
+          <div class="am-modal-hd">关于</div>
+          <div class="am-modal-bd">
+            科创3C-第20小组展示<br>
+            © 2016~2017 KC3C-2016-AUT-20. Powered by Amaze UI.<br>
+            小组成员: 耿晓晴 瞿文浩 徐正天 张福明
+          </div>
+          <div class="am-modal-footer">
+            <span class="am-modal-btn">确定</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="am-u-sm-2"></div>
+  <div class="am-u-sm-2"></div>
+  <div class="am-u-sm-8 am-u-sm-offset-2 textwrapper">
+    <span style="color:white; font-size:large">
+      苟利国家生死以，岂因祸福避趋之！
+    </span>
+  </div>
+  <div class="am-u-sm-2"></div>
+</footer>
+</div>
+<script src="scripts/addLoadEvent.js"></script>
+<script src="scripts/changeOpacity.js"></script>
+<script src="scripts/moveElement.js"></script>
+<script src="scripts/headwrapper.js"></script>
+<script src="scripts/smoothScrollAssistent.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
